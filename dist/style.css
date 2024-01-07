@@ -1,0 +1,106 @@
+:root {
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "monsterrat light";
+  src: url("../font/monsterrat/Montserrat-Light.ttf");
+}
+@font-face {
+  font-family: "fraunces bold";
+  src: url("../font/fraunces/Fraunces_144pt-Bold.ttf");
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  background-color: var(--cream);
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+button {
+  all: unset;
+  cursor: pointer;
+}
+.card {
+  margin: 1rem;
+  max-width: 600px;
+  display: flex;
+  /* border: 2px solid red; */
+  border-radius: 12px;
+  overflow: hidden;
+}
+.card > * {
+  flex: 0 0 50%;
+}
+.card-left {
+  overflow: hidden;
+}
+.card-left__img {
+  overflow: hidden;
+}
+.card-right {
+  background-color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-right__title {
+  letter-spacing: 5px;
+  font-family: "monsterrat light";
+}
+.card-right__heading {
+  font-size: 2rem;
+  font-family: "fraunces bold";
+  line-height: 1;
+}
+.card-right__desc {
+  color: var(--dark-grayish-blue);
+  font-family: "monsterrat light";
+  line-height: 23px;
+}
+.new-price {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "fraunces bold";
+  color: var(--dark-cyan);
+  margin-right: 0.6rem;
+}
+.old-price {
+  color: var(--dark-grayish-blue);
+  text-decoration: line-through;
+}
+.card-right__btn {
+  display: flex;
+  color: white;
+  padding-block: 0.8rem;
+  border-radius: 12px;
+  justify-content: center;
+  background-color: var(--dark-cyan);
+  font-family: "monsterrat light";
+}
+.card-right__btn span {
+  margin-left: 0.5rem;
+  font-weight: bolder;
+}
+@media screen and (max-width: 576px) {
+  .card {
+    flex-direction: column;
+    /* padding-top: 1rem; */
+  }
+  .card > * {
+    flex: 1 0 auto;
+  }
+}
